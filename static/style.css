@@ -1,0 +1,242 @@
+/*
+* Global Styles and Animations
+* These styles apply to all pages unless specifically overridden.
+*/
+body {
+    font-family: sans-serif;
+    color: #1a202c;
+    margin: 0;
+    /*overflow: hidden;*/
+    position: relative;
+    min-height: 100vh;
+}
+
+/* New container to hold the full-screen background image */
+.full-bg-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* An overlay to slightly dim the background image for better readability */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Fade-in and fade-out animations for transitions */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-text{
+    font-size: 32px;
+    display: relative
+}
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-container img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* Navigation icons and dropdown */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1.5rem;
+}
+
+.nav-button {
+    width: 3rem;
+    height: 3rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-button img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 11;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/*
+Custom styling for iframes
+*/
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/*-------------------main page css-------------------------*/
+/* Opening page container styling */
+#opening-page {
+    background-image: url('Main Office.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: opacity 1s ease-in-out;
+}
+
+.opening-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: #054ab0;
+    opacity: 0; /* Initially hidden */
+}
+
+.logo-image {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.main-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sub-text {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+/* Dashboard page styling */
+#dashboard-page {
+    display: none; /* Initially hidden */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*-------------------home page css-------------------------*/
+.home-page-bg {
+    background-image: url('Main Office.png');
+}
+/*-------------------end ot the line-------------------------*/
+
+/*-------------------2nd factory css-------------------------*/
+/* Specific background for the second factory */
+.primary-factory-bg {
+    background-image: url('Factory-1.png');
+}
+/*-------------------end ot the line-------------------------*/
+
+/*-------------------2nd factory css-------------------------*/
+/* Specific background for the second factory */
+.secondary-factory-bg {
+    background-image: url('Factory-2.png');
+}
+/*-------------------end ot the line-------------------------*/
+
+/*-------------------3rd factory css-------------------------*/
+/* Specific background for the third factory */
+.third-factory-bg {
+    background-image: url('Factory-3.png');
+}
+/*-------------------end ot the line-------------------------*/
+.toyota-factory-bg {
+    background-image: url('Factory-toyota.png');
+}
+/*-------------------end ot the line-------------------------*/
+
